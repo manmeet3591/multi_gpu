@@ -4,20 +4,35 @@
 This logs interactively into the grace hopper nodes
 2. scontrol show hostnames $SLURM_JOB_NODELIST
 c609-101[gh](999)$ scontrol show hostnames $SLURM_JOB_NODELIST
+
 c609-101
+
 c609-102
+
 c609-111
+
 c609-112
+
 c609-121
+
 c609-122
+
 c609-131
+
 c609-132
+
 c609-141
+
 c609-142
+
 c609-151
+
 c609-152
+
 c610-001
+
 c610-002
+
 c610-011
 4. ssh c502-002 - for one node
 5. srun -N4 --ntasks-per-node=1 nvidia-smi
