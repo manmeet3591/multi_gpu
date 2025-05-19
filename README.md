@@ -33,10 +33,13 @@ c610-001
 c610-002
 
 c610-011
+
 4. ssh c502-002 - for one node
+
 5. srun -N4 --ntasks-per-node=1 nvidia-smi
 
 Displays nvidia-smi output for all the 4 nodes, if we put N16, then it will show for 16 nodes
+
 6. srun --ntasks=4 -N4 hostname
 
 c609-101.vista.tacc.utexas.edu
