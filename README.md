@@ -44,6 +44,12 @@ Displays nvidia-smi output for all the 4 nodes, if we put N16, then it will show
 
 c609-101.vista.tacc.utexas.edu
 
+7. sbatch submit_script.sh
+
+8. squeue -u $USER
+
+9. scancel job_id
+
 c609-102.vista.tacc.utexas.edu
 
 c609-112.vista.tacc.utexas.edu
