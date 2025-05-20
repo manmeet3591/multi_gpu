@@ -1,0 +1,15 @@
+Bootstrap: docker
+From: nvcr.io/nvidia/pytorch:25.04-py3
+
+%post
+    echo "Updating pip..."
+    python3 -m pip install --upgrade pip
+
+    echo "Installing non-MPI packages..."
+    pip install xarray torch-harmonics tensorly tensorly-torch wandb torchvision timm jupyter
+
+    echo "Installing mpi4py using host MPI..."
+    # Load host MPI paths (TACC OpenMPI) into container environment
+    export OMPI_CC=gcc
+    export OMPI_CXX=g++
+    python3 -m pip install --no-binary=mpi4py mpi4py
